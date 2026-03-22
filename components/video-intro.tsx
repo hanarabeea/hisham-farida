@@ -11,6 +11,18 @@ export default function VideoIntro({ onComplete, onSkip }: VideoIntroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
+  const [loopCount, setLoopCount] = useState(0);
+
+  const handleVideoEnded = () => {
+    if (loopCount < 3) {
+      setLoopCount(prev => prev + 1);
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    } else {
+      onComplete();
+    }
+  };
 
   useEffect(() => {
     // Check if iOS
@@ -88,7 +100,7 @@ export default function VideoIntro({ onComplete, onSkip }: VideoIntroProps) {
         // @ts-ignore
         disablePictureInPicture
         preload="auto"
-        onEnded={onComplete}
+        onEnded={handleVideoEnded}
         style={{
           position: 'absolute',
           top: 0,
@@ -101,7 +113,7 @@ export default function VideoIntro({ onComplete, onSkip }: VideoIntroProps) {
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       >
-        <source src="/wedding-video.mp4" type="video/mp4" />
+        <source src="/engagement-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
