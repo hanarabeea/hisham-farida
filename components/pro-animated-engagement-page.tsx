@@ -212,7 +212,7 @@ export default function ProAnimatedEngagementPage({ onImageLoad, playGifTrigger 
   const pathY1 = useTransform(scrollYProgress, [0, 0.5], [0, 20])
   const pathY2 = useTransform(scrollYProgress, [0, 0.5], [0, 40])
   
-  const eventDate = new Date("2026-04-23T18:00:00");
+  const eventDate = new Date("2026-04-23T19:00:00");
   const formattedDate = formatDate(eventDate, language);
   const formattedTime = formatTime(eventDate, language);
 
@@ -488,7 +488,7 @@ export default function ProAnimatedEngagementPage({ onImageLoad, playGifTrigger 
           </motion.div>
 
           <motion.div variants={scaleIn}>
-            <CountdownTimer targetDate={new Date("2026-04-23T18:00:00")} />
+            <CountdownTimer targetDate={new Date("2026-04-23T19:00:00")} />
           </motion.div>
         </div>
       </motion.section>
