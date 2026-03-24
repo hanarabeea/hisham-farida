@@ -16,18 +16,18 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hishamandfarida.site"),
+  metadataBase: new URL("https://hisham-farida.digitivaa.com"),
   title: "Welcome to Our Beginning",
   description: "Celebrating the start of our journey together",
   generator: "Digitiva",
   openGraph: {
-    url: "https://hishamandfarida.site/",
+    url: "https://hisham-farida.digitivaa.com/",
     type: "website",
     title: "Welcome to Our Beginning",
     description: "Celebrating the start of our journey together",
     images: [
       {
-        url: "https://hishamandfarida.site/invitation-design-arabic.jpg",
+        url: "https://hisham-farida.digitivaa.com/invitation-design.png",
         width: 1200,
         height: 630,
         alt: "Our Wedding Invitation",
@@ -38,11 +38,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Welcome to Our Beginning",
     description: "Celebrating the start of our journey together",
-    images: ["https://hishamandfarida.site/invitation-design-arabic.jpg"],
+    images: ["https://hisham-farida.digitivaa.com/invitation-design.png"],
   },
   icons: {
-    icon: "/invitation-design-arabic.jpg",
-    apple: "/invitation-design-arabic.jpg",
+    icon: "/invitation-design.png",
+    apple: "/invitation-design.png",
   },
 }
 
@@ -55,13 +55,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* ✅ Open Graph tags for Facebook & WhatsApp previews */}
-        <meta property="og:url" content="https://hishamandfarida.site/" />
+        <meta property="og:url" content="https://hisham-farida.digitivaa.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Welcome to Our Beginning" />
         <meta property="og:description" content="Celebrating the start of our journey together" />
         <meta
           property="og:image"
-          content="https://hishamandfarida.site/invitation-design-arabic.jpg"
+          content="https://hisham-farida.digitivaa.com/invitation-design.png"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -72,14 +72,14 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Welcome to Our Beginning" />
         <meta name="twitter:description" content="Celebrating the start of our journey together" />
-        <meta name="twitter:image" content="https://hishamandfarida.site/invitation-design-arabic.jpg" />
+        <meta name="twitter:image" content="https://hisham-farida.digitivaa.com/invitation-design.png" />
 
         {/* Preload critical images for immediate loading */}
         <link
           rel="preload"
-          href="/invitation-design-arabic.jpg"
+          href="/invitation-design.png"
           as="image"
-          type="image/jpg"
+          type="image/png"
         />
         {/* Preload GIF with high priority to eliminate lag on Netlify */}
         <link
